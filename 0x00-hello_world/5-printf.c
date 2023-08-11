@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - entry point
+ * main - a
  *
- * description: 'nothing'
+ * description
  *
  * Return: 0
  */
