@@ -11,16 +11,17 @@ int main(void)
 
 	fib1 = 1;
 	fib2 = 2;
-    sum2 = 0;
+	sum2 = 0;
 	printf("%lu", fib1);
 	for (i = 0; i < 300; i++)
 	{
 		sum = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = sum;
-        sum2 += fib1;
+		sum2 += fib1;
 		if (fib1 >= 4000000)
-            break;
+			break;
+		printf("%lu", fib2);
 	}
 	printf("\n");
 	return (0);
