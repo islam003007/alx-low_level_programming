@@ -23,5 +23,6 @@ int main(void)
             continue;
         }
     }
-    puts("");
+    printf("%d\n", sum);
+    return (0);
 }
