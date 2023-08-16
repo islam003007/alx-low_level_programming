@@ -18,7 +18,7 @@ int main(void)
 		sum = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = sum;
-		if (fib1 % 2 ==0)
+		if (fib1 % 2 == 0)
 			sum2 += fib1;
 		if (fib1 >= 4000000)
 			break;
