@@ -11,7 +11,7 @@ int main(void)
 
 	fib1 = 0;
 	fib2 = 1;
-	printf("%lu ,", fib2);
+	printf("%lu", fib2);
 	for (i = 0; i < 49; i++)
 	{
 		sum = fib1 + fib2;
