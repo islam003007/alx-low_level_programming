@@ -9,16 +9,16 @@ int main(void)
 {
 	unsigned long i, fib1, fib2, sum;
 
-    fib1 = 0;
-    fib2 = 1;
-    printf("%lu ,%lu", fib1, fib2);
-	for (i = 0; i < 48; i++)
+	fib1 = 0;
+	fib2 = 1;
+	printf("%lu ,", fib2);
+	for (i = 0; i < 49; i++)
 	{
-        sum = fib1 + fib2;
-        fib1 = fib2;
-        fib2 = sum;
+		sum = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = sum;
 		printf(", %lu", fib2);
 	}
-    printf("\n");
+	printf("\n");
 	return (0);
 }
