@@ -2,27 +2,27 @@
 
 /**
  * main - entry point
- * 
+ *
  * Return: 0 (success)
 */
 int main(void)
 {
-    int i, sum;
+	int i, sum;
 
-    sum = 0;
-    for (i = 0; i < 1024; i++)
-    {
-        if (i % 3 == 0)
-        {
-            sum += i;
-            continue;
-        }
-        if (i % 5 == 0)
-        {
-            sum += i;
-            continue;
-        }
-    }
-    printf("%d\n", sum);
-    return (0);
+	sum = 0;
+	for (i = 0; i < 1024; i++)
+	{
+		if (i % 3 == 0)
+		{
+			sum += i;
+			continue;
+		}
+		if (i % 5 == 0)
+		{
+			sum += i;
+			continue;
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
