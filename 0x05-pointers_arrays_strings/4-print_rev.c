@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_rev: reverses a string and prints it to the console
+ * print_rev - reverses a string and prints it to the console
  *
  * @s: provides input string
 */
