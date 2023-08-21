@@ -11,7 +11,7 @@ int main(void)
     char *str;
     int len;
 
-    str = "My flirst strlen!";
+    str = "My flirst ssadastrlen!";
     len = _strlen(str);
     printf("%d\n", len);
     return (0);
