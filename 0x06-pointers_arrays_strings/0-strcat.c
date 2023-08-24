@@ -20,5 +20,6 @@ char *_strcat(char *dest, char *src)
 		src_index++;
 		dest_index++;
 	}
+	dest[dest_index] = src[src_index];
 	return (dest);
 }
