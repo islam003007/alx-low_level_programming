@@ -7,6 +7,7 @@
  *
  * Return: quare root of a number.
  */
+int square_root(int n, int a);
 int _sqrt_recursion(int n)
 {
 	return (square_root(n, 1));
