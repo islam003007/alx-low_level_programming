@@ -1,18 +1,4 @@
 #include "main.h"
-
-/**
- * _sqrt_recursion - that returns the natural square root of a number.
- *
- * @n: inputs number.
- *
- * Return: quare root of a number.
- */
-int square_root(int n, int a);
-int _sqrt_recursion(int n)
-{
-	return (square_root(n, 1));
-}
-
 /**
  * square_root - temp function for _sqrt_recursion
  *
@@ -29,4 +15,15 @@ int square_root(int n, int a)
 		return (-1);
 	else
 		return (square_root(n, a + 1));
+}
+/**
+ * _sqrt_recursion - that returns the natural square root of a number.
+ *
+ * @n: inputs number.
+ *
+ * Return: quare root of a number.
+ */
+int _sqrt_recursion(int n)
+{
+	return (square_root(n, 1));
 }
