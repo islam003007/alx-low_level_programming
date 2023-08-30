@@ -1,32 +1,31 @@
 #include "main.h"
+
 /**
- * _sqrt_recursion - returns the natural square root of a number.
+ * _sqrt_recursion - that returns the natural square root of a number.
  *
  * @n: inputs number.
  *
- * Return: the natural square root of a numbber.
-*/
-
-int sqr_temp(int n, int a);
+ * Return: quare root of a number.
+ */
 int _sqrt_recursion(int n)
 {
-	return (sqr_temp(n, 0));
+	return (square_root(n, 1));
 }
 
 /**
- * sqr_temp - secondry function used by _sqrt_recursion.
+ * square_root - temp function for _sqrt_recursion
  *
  * @n: inputs number.
- * @a: inputs temporary value.
+ * @a: integer temp value.
  *
- * Return: square root.
-*/
-int sqr_temp(int n, int a)
+ * Return: quare root of a number.
+ */
+int square_root(int n, int a)
 {
 	if (a * a == n)
 		return (a);
-	else if (a * a < n)
-		return (sqr_temp(n, n + 1));
-	else
+	else if (a * a > n)
 		return (-1);
+	else
+		return (square_root(n, a + 1));
 }
