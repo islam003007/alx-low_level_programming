@@ -13,6 +13,11 @@ int main(int argc, char *argv[])
 {
 	int result = 0;
 
+	if (arc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
 	while (--argc)
 	{
 		if (!atoi(*(++argv)))
