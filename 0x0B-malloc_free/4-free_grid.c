@@ -9,9 +9,6 @@
 
 void free_grid(int **grid, int height)
 {
-
-	(void)height;
-
 	while (*grid++ != NULL)
 	{
 		int i;
