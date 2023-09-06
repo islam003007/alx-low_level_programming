@@ -90,7 +90,6 @@ char **strtow(char *str)
 	for (i = 0; i < words; i++)
 	{
 		start = new_word(str, words_arr + i, start);
-		printf("one time\n");
 	}
 
 	return (words_arr);
