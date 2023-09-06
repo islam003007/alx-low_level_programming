@@ -87,13 +87,17 @@ char **strtow(char *str)
 		return (NULL);
 	}
 
-	if (words > 1)
+	if (words == 1)
 	{
-		for (i = 0; i < words; i++)
-		{
-			start = new_word(str, words_arr + i, start);
-		}
+		words_arr[0] = NULL;
+		return (words_arr);
 	}
+
+	for (i = 0; i < words; i++)
+	{
+		start = new_word(str, words_arr + i, start);
+	}
+
 	words_arr[i] = NULL;
 
 	return (words_arr);
