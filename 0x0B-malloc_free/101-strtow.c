@@ -89,7 +89,7 @@ char **strtow(char *str)
 
 	if (words == 1)
 	{
-		words_arr = NULL;
+		words_arr[0] = NULL;
 		return (words_arr);
 	}
 
