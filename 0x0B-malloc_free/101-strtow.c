@@ -76,7 +76,7 @@ char **strtow(char *str)
 	int words = word_count(str);
 	char **words_arr;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
 
 	words_arr = malloc(sizeof(char *) * words + 1);
@@ -84,11 +84,6 @@ char **strtow(char *str)
 	if (words_arr == NULL)
 	{
 		printf("fail\n");
-		return (NULL);
-	}
-
-	if (words == 1)
-	{
 		return (NULL);
 	}
 
