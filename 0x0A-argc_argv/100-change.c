@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 
 	if (cents < 0)
 	{
-		printf("i\n", 0);
+		printf("%i\n", 0);
 		return (0);
 	}
 
