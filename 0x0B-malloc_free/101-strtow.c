@@ -73,11 +73,13 @@ char **strtow(char *str)
 {
 	int i;
 	int start = 0;
-	int words = word_count(str);
+	int words;
 	char **words_arr;
 
 	if (str == NULL || *str == '\0' || (str[0] == ' ' && str[1] == '\0'))
 		return (NULL);
+
+	words = word_count(str);
 
 	words_arr = malloc(sizeof(char *) * words + 1);
 
