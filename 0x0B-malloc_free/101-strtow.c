@@ -85,7 +85,6 @@ char **strtow(char *str)
 
 	if (words_arr == NULL)
 	{
-		printf("fail\n");
 		return (NULL);
 	}
 
