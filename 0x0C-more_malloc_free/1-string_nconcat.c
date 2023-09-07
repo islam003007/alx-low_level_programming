@@ -1,6 +1,27 @@
 #include "main.h"
 
 /**
+ * _strlen - strlen
+ *
+ * @str: inputs string.
+ *
+ * Return: string length.
+*/
+
+unsigned int _strlen(char *str)
+{
+	unsigned int i;
+
+	if (str == NULL || str[0] == '\0')
+		return (0);
+
+	for (i = 0; str[i]; i++)
+		;
+
+	return (i);
+}
+
+/**
  * string_nconcat - concatenates 2 strings.
  *
  * @s1: inputs first string.
@@ -19,15 +40,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	char *str;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	for (s1_length = 0; s1[s1_length]; s1_length++)
-		;
-	for (s2_length = 0; s2[s2_length]; s2_length++)
-		;
+	s1_length = _strlen(s1);
+	s2_length = _strlen(s2);
 
 	str = malloc(sizeof(char) * (s1_length + s2_length + 1));
 
