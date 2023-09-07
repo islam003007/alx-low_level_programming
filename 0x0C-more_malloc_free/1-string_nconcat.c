@@ -12,9 +12,9 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int s1_length;
-	int s2_length;
-	int i;
+	unsigned int s1_length;
+	unsigned int s2_length;
+	unsigned int i;
 	unsigned int j;
 	char *str;
 
