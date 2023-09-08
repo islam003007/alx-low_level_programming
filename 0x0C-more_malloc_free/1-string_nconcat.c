@@ -48,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (str == NULL)
 		return (NULL);
 
-	if (s2_length < n)
+	if (s2_length <= n)
 		n = s2_length;
 
 	for (i = 0; i < s1_length; i++)
