@@ -15,7 +15,7 @@ unsigned int _strlen(char *str)
 	if (str == NULL || str[0] == '\0')
 		return (0);
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i]; ++i)
 		;
 
 	return (i);
