@@ -11,10 +11,11 @@
 
 int main(int argc, char *argv[])
 {
-	unsigend long int result;
+	unsigned long int result;
 
 	(void)argc;
 	(void)argv;
-
+	(void)result;
+	
 	return (0);
 }
