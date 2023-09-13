@@ -24,4 +24,6 @@ int main(int argc, char *argv[])
 		prinft("Error\n");
 		exit(2);
 	}
+
+	return (0);
 }
