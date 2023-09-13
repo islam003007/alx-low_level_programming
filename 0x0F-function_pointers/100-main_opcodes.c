@@ -16,12 +16,12 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		prinft("Error\n");
+		printf("Error\n");
 		exit(1);
 	}
 	if (num < 0)
 	{
-		prinft("Error\n");
+		printf("Error\n");
 		exit(2);
 	}
 
