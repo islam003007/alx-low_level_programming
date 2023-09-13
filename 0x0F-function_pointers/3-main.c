@@ -14,9 +14,6 @@ int main(int argc, char *argv[])
 	int num1, num2, calc;
 	int (*op_fun)(int, int);
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -29,6 +26,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
+
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
 	calc = op_fun(num1, num2);
 	printf("%i\n", calc);
