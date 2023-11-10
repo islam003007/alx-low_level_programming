@@ -19,7 +19,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fp == -1)
 		return (0);
 
-	if (read(fp, buffer, letters) == 0)
+	i = read(fp, buffer, letters);
+
+	if (i == -1)
 		return (0);
 
 	i = write(1, buffer, letters);
