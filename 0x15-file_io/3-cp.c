@@ -34,10 +34,10 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 	}
 
-	while (r = read(file_from, buffer, 1024) > 0)
+	while ((r = read(file_from, buffer, 1024)) > 0)
 	{
 	
-		if (w = write(file_to, buffer, r) < 0)
+		if ((w = write(file_to, buffer, r)) < 0)
 		{
 			exit(99);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
