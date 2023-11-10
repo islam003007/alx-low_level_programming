@@ -21,21 +21,29 @@ int main(int argc, char **argv)
 	}
 
 	file_from = open(argv[1], O_RDONLY);
-	r = read(file_from, buffer, 1024);
-	if (file_from < 0 || r < 0)
+	if (file_from < 0)
 	{
 		exit(98);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s", argv[1]);
 	}
 
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	w = write(file_to, buffer, r);
-	if (file_to < 0 || w < 0)
+	if (file_to < 0)
 	{
 		exit(99);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 	}
 
+	while (r = read(file_from, buffer, 1024) > 0)
+	{
+	
+		if (w = write(file_to, buffer, r) < 0)
+		{
+			exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+		}
+	
+	}
 	if (close(file_from) < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i", file_from);
