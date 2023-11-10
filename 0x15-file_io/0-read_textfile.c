@@ -11,7 +11,8 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fp, i;
+	int fp;
+	ssize_t i;
 	char buffer[1024 * 8];
 
 	fp = open(filename, O_RDONLY);
