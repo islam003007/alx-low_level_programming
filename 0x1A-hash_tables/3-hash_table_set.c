@@ -21,13 +21,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((unsigned char *)key, ht->size);
 	temp = ht->array[index];
-	while (ht->array[index] != NULL && ht->array[index]->next != NULL)
+	while (temp != NULL && temp->next != NULL)
 	{
 		if (!strcmp(temp->key, key))
 		{
 			temp->value = strdup(value);
 			return (1);
 		}
+		temp = temp->next;
 	}
 
 	new_node = malloc(sizeof(hash_node_t));
